@@ -18,6 +18,7 @@ brew cask install \
   clashx \
   iina \
   scroll-reverser \
+  keycastr \
   typora
 
 # development - formula
