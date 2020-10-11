@@ -1,0 +1,19 @@
+source ~/.zshenv
+export ZSH="${HOME}/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+plugins=(git node golang cargo rust docker docker-compose zsh-syntax-highlighting)
+source $ZSH/oh-my-zsh.sh
+
+alias jsonfmt="python -m json.tool"
+alias mvim='open -a MacVim'
+
+# docker cmds
+docker_remove_containers() {
+	docker ps -a | awk '{print $1}' | awk 'NR>1' | xargs docker rm
+}
+
+remove_http_proxy() {
+  export https_proxy= http_proxy= all_proxy=
+}
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

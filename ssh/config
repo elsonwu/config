@@ -1,0 +1,8 @@
+ServerAliveInterval 120
+# Template
+# Host github.com
+# IdentityFile ~/.ssh/id_github_rsa
+  # through HTTP proxy 
+  # ProxyCommand socat - PROXY:127.0.0.1:%h:%p,proxyport=7890
+  # through socks5 proxy, currently Shadowsocks
+  # ProxyCommand nc -v -x 127.0.0.1:7891 %h %p
