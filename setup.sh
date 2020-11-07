@@ -5,6 +5,8 @@ xcode-select --install
 # oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
 # homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
@@ -41,7 +43,6 @@ brew cask install \
 
 # rust
 brew install rustup-init && rustup-init
-rustup component add rls rust-src
 brew install rust-analyzer 
 
 # zsh config
@@ -51,5 +52,5 @@ ln -s $(pwd)/zsh/zshrc $HOME/.zshrc
 
 # vim
 pushd
-git clone git@github.com:elsonwu/vim.git $HOME/.vim && cd $HOME/.vim && ./setup.sh
+git clone https://github.com/elsonwu/vim.git $HOME/.vim && cd $HOME/.vim && ./setup.sh
 popd
